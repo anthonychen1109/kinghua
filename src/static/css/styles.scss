@@ -1,0 +1,96 @@
+//########################## HEADER ##########################
+
+.header {
+  height: 100vh;
+  width: 100%;
+  h1 {
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    text-shadow: 0px 0px 3px black;
+    transform: translate(-50%, -50%);
+  }
+}
+
+//########################## ABOUT ##########################
+
+.about {
+  padding-top: 80px;
+  @media only screen and (max-width: 800px) {
+    .container {
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.about-container {
+  display: flex;
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+  .about-text {
+    flex-basis: 50%;
+    margin: 5px;
+    padding: 10px;
+  }
+  .about-img {
+    flex-basis: 50%;
+    height: 300px;
+    margin: 5px;
+    width: 100%;
+  }
+}
+
+//########################## CONTACT ##########################
+
+.contact {
+  margin-top: 80px;
+  width: 100%;
+  @media only screen and (max-width: 800px) {
+    .container {
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+  .overlay {
+    background-color: rgba(0,0,0,0.1);
+    padding-bottom: 40px;
+    width: 100%;
+    h1 {
+      color: white;
+      padding-top: 80px;
+      text-shadow: 0px 0px 3px black;
+    }
+    .contact-info {
+      padding-top: 40px;
+      @media only screen and (max-width: 800px) {
+        padding-bottom: 40px;
+        h5, p {
+          text-align: center;
+        }
+      }
+      h5, p {
+        color: white;
+        text-shadow: 0px 0px 3px black;
+      }
+    }
+  }
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+  .contact-info {
+    flex-basis: 40%;
+  }
+  .contact-location {
+    flex-basis: 60%;
+  }
+}
