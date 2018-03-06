@@ -2,6 +2,28 @@
   margin: 0;
   padding: 0; }
 
+.to-top {
+  border: 1px solid black;
+  bottom: 0;
+  position: fixed;
+  margin: 5%;
+  right: 0;
+  z-index: 999; }
+  @media only screen and (max-width: 800px) {
+    .to-top {
+      display: none; } }
+
+.app-nav {
+  display: flex;
+  justify-content: space-evenly;
+  height: 10vh;
+  padding-top: 20px; }
+  @media only screen and (max-width: 800px) {
+    .app-nav {
+      display: none; } }
+  .app-nav h5:hover {
+    cursor: pointer; }
+
 .navbar {
   display: none; }
 
@@ -33,7 +55,8 @@
         right: 0; } }
 .responsive {
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 99; }
   .responsive .topNav {
     background-color: white;
     display: flex;

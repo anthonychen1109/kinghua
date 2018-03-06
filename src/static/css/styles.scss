@@ -3,7 +3,34 @@
   padding: 0;
 }
 
+.to-top {
+  border: 1px solid black;
+  bottom: 0;
+  position: fixed;
+  margin: 5%;
+  right: 0;
+  z-index: 999;
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
 //########################## NAVBAR ##########################
+.app-nav {
+  display: flex;
+  justify-content: space-evenly;
+  height: 10vh;
+  padding-top: 20px;
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
+  h5 {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 .navbar {
   display: none;
 }
@@ -47,6 +74,7 @@
 .responsive {
   position: fixed;
   width: 100%;
+  z-index: 99;
   .topNav {
     background-color: white;
     display: flex;
@@ -73,7 +101,6 @@
 }
 
 //########################## HEADER ##########################
-
 .header {
   height: 100vh;
   width: 100%;
