@@ -7,7 +7,7 @@ const about = images.about;
 
 const About = () => {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <div className="container">
         <h1>About Us</h1>
         <div className="about-container">

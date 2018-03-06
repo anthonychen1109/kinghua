@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 class Navbar extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class Navbar extends Component {
     };
     this.dropDownMenu = this.dropDownMenu.bind(this);
     this.refreshPage = this.refreshPage.bind(this);
+    this.goToByScroll = this.goToByScroll.bind(this);
   }
 
   dropDownMenu() {
@@ -15,12 +17,16 @@ class Navbar extends Component {
     if (x.className === 'navbar') {
       x.className = 'responsive';
     } else {
-      x.className = "navbar"
+      x.className = "navbar";
     }
   }
 
   refreshPage() {
     window.location.reload();
+  }
+
+  goToByScroll(id){
+    $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
   }
 
   render() {
@@ -32,9 +38,9 @@ class Navbar extends Component {
             >
             King Hua Chinese Restaurant
           </li>
-          <li>About</li>
+          <li onClick={() => this.goToByScroll('about')}>About</li>
           <li>Order Online</li>
-          <li>Contact</li>
+          <li onClick={() => this.goToByScroll('contact')}>Contact</li>
           <li
             className="dropDownIcon"
             onClick={this.dropDownMenu}

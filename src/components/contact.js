@@ -8,7 +8,7 @@ const contact = images.contact;
 
 const Contact = () => {
   return (
-    <div className="contact"
+    <div id="contact" className="contact"
       style={{ backgroundImage: "url(" + contact + ")",
                backgroundPosition: "center",
                backgroundRepeat: "no-repeat",
